@@ -1,0 +1,24 @@
+[package]
+name = "rust-fleet-blueprint"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
+clap = { version = "4.5", features = ["derive"] }
+reqwest = { version = "0.11", features = ["json", "rustls-tls"] }
+surrealdb = { version = "1.2", features = ["kv-rocksdb"] }
+wireguard-control = "0.4"
+bollard = { version = "0.15", features = ["tls"] }
+thiserror = "1.0"
+async-trait = "0.1"
+blake3 = "1.5"
+base64 = "0.22"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
